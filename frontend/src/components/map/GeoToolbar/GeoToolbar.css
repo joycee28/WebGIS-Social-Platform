@@ -1,0 +1,114 @@
+/* Geo Toolbar */
+
+.geo-toolbar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--spacing-md);
+}
+
+.geo-toolbar-wrapper {
+
+    position: absolute;
+
+    top: var(--map-safe-top);
+
+    right: 24px;
+
+    z-index: 900;
+}
+
+/* Toolbar Button */
+
+.geo-toolbar__button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: var(--radius-xl);
+
+    background-color:
+        var(--color-white);
+
+    box-shadow:
+        0 4px 12px
+        rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform var(--transition-fast),
+        background-color var(--transition-fast);
+}
+
+.geo-toolbar__button:hover {
+    transform: translateY(-2px);
+
+    background-color: #f9fafb;
+}
+
+.geo-toolbar__layers {
+
+    position: absolute;
+
+    top: 0;
+
+    right: 72px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding: 12px;
+
+    min-width: 200px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0,0,0,.12);
+
+    z-index: 1001;
+}
+
+.geo-toolbar__layer {
+
+    display: flex;
+
+    align-items: center;
+
+    width: 180px;
+
+    padding: 10px 14px;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #111827;
+
+    text-align: left;
+
+    transition: all 0.2s ease;
+}
+
+.geo-toolbar__layer:hover {
+
+    background: #f3f4f6;
+}
+
+.geo-toolbar__layer--active {
+
+    background-color: #2563eb;
+
+    color: white;
+}

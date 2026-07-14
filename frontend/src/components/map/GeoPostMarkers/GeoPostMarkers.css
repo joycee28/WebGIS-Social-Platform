@@ -1,0 +1,133 @@
+.geo-post-marker {
+
+    position: relative;
+
+    width: 32px;
+    height: 32px;
+}
+
+.geo-post-marker__dot {
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    border: 3px solid white;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.25);
+
+    transition: all .25s ease;
+}
+
+.geo-post-marker--active
+.geo-post-marker__dot {
+
+    transform: scale(1.35);
+
+    background: #10b981;
+}
+
+.geo-post-marker__pulse {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 32x;
+    height: 32px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(16,185,129,.35);
+
+    transform:
+        translate(-50%, -50%);
+
+    animation:
+        geo-marker-pulse
+        1.8s infinite;
+}
+
+.geo-cluster {
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #1d4ed8
+        );
+
+    color: white;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 4px 16px
+        rgba(37,99,235,.35);
+}
+
+@keyframes geo-marker-pulse {
+
+    0% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(2.5);
+
+        opacity: 0;
+    }
+}
+
+.geo-post-category-icon {
+    background: transparent !important;
+    border: none !important;
+}
+
+.geo-post-category-icon__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    font-size: 24px;
+    line-height: 1;
+    transform: translateY(-4px);
+}
+
+.geo-post-category-icon--active .geo-post-category-icon__inner {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    font-size: 28px;
+}

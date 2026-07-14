@@ -1,0 +1,16 @@
+.user-location-marker__dot {
+
+    width: 16px;
+
+    height: 16px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    border: 3px solid white;
+
+    box-shadow:
+        0 0 0 6px
+        rgba(37, 99, 235, 0.25);
+}

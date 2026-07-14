@@ -1,0 +1,165 @@
+/* Skeleton Animation */
+
+@keyframes skeleton-loading {
+
+    0% {
+        opacity: 0.55;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.55;
+    }
+
+}
+
+@keyframes skeleton-shimmer {
+
+    0% {
+        background-position:
+            200% 0;
+    }
+
+    100% {
+        background-position:
+            -200% 0;
+    }
+
+}
+
+/* Skeleton Root */
+
+.skeleton-post-card {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--spacing-lg);
+
+    padding: var(--spacing-lg);
+
+    border-radius: var(--radius-xl);
+
+    background-color: var(--color-white);
+
+    border:
+        1px solid
+        var(--color-border);
+}
+
+/* Shared Skeleton Style */
+
+.skeleton-post-card__avatar,
+.skeleton-post-card__line,
+.skeleton-post-card__image,
+.skeleton-post-card__action {
+    background:
+        linear-gradient(
+            90deg,
+            #e5e7eb 25%,
+            #f3f4f6 50%,
+            #e5e7eb 75%
+        );
+
+    background-size:
+        200% 100%;
+
+    animation:
+        skeleton-shimmer 1.4s linear infinite;
+}
+
+/* Header */
+
+.skeleton-post-card__header {
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--spacing-md);
+}
+
+/* Avatar */
+
+.skeleton-post-card__avatar {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+/* Meta */
+
+.skeleton-post-card__meta {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--spacing-sm);
+
+    width: 100%;
+}
+
+/* Lines */
+
+.skeleton-post-card__line {
+    height: 14px;
+
+    border-radius: var(--radius-md);
+
+    width: 100%;
+}
+
+.skeleton-post-card__line--short {
+    width: 40%;
+}
+
+.skeleton-post-card__line--tiny {
+    width: 25%;
+}
+
+.skeleton-post-card__line--medium {
+    width: 75%;
+}
+
+/* Content */
+
+.skeleton-post-card__content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--spacing-sm);
+}
+
+/* Image Placeholder */
+
+.skeleton-post-card__image {
+    width: 100%;
+
+    height: 280px;
+
+    border-radius: var(--radius-lg);
+}
+
+/* Actions */
+
+.skeleton-post-card__actions {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: var(--spacing-md);
+}
+
+.skeleton-post-card__action {
+    width: 100px;
+
+    height: 40px;
+
+    border-radius: var(--radius-lg);
+}

@@ -1,0 +1,41 @@
+/* Feed List */
+
+.feed-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--spacing-lg);
+}
+
+/* Loading State */
+
+.feed-list__loading {
+    text-align: center;
+
+    padding: var(--spacing-xl);
+
+    color:
+        var(--color-text-secondary);
+}
+
+/* End Message */
+
+.feed-list__end-message {
+    text-align: center;
+
+    padding: var(--spacing-xl);
+
+    color:
+        var(--color-text-secondary);
+}
+
+/* Skeleton Loading */
+
+.feed-list__skeletons {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--spacing-lg);
+}

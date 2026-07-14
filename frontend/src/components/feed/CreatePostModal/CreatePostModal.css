@@ -1,0 +1,114 @@
+/* ==========================================================
+ * Overlay
+ * ========================================================== */
+
+.create-post-modal__overlay {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.45);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: var(--z-modal);
+
+    animation: modalFadeIn 0.25s ease;
+}
+
+
+/* ==========================================================
+ * Modal Container
+ * ========================================================== */
+
+.create-post-modal {
+
+    width: 100%;
+    max-width: 700px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: var(--color-white);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+
+    animation: modalSlideUp 0.25s ease;
+}
+
+.create-post-modal__header {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 20px;
+}
+
+
+/* ==========================================================
+ * Animation
+ * ========================================================== */
+
+@keyframes modalFadeIn {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+}
+
+@keyframes modalSlideUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* ==========================================================
+ * Responsive
+ * ========================================================== */
+
+@media (max-width: 768px) {
+
+    .create-post-modal {
+
+        width: calc(100% - 24px);
+
+        margin: 12px;
+    }
+}

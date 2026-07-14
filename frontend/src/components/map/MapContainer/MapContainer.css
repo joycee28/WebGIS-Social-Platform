@@ -1,0 +1,40 @@
+/* Map Container */
+
+.map-container {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* Placeholder */
+
+.map-container__placeholder {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    gap: var(--spacing-md);
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #bfdbfe
+        );
+}
+
+/* Leaflet Container */
+
+.map-container__leaflet {
+    width: 100%;
+    height: 100%;
+}

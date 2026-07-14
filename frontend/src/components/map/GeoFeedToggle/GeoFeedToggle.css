@@ -1,0 +1,70 @@
+.geo-feed-toggle {
+
+    position: absolute;
+
+    /* top: 50%; */
+    right: 22px;
+    bottom: 24px;
+
+    transform: translateY(-50%);
+
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,0.12);
+
+    z-index: 900;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.geo-feed-toggle {
+
+    animation:
+        geoFeedPulse 2.5s infinite;
+}
+
+.geo-feed-toggle:hover {
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+
+    box-shadow:
+        0 12px 32px rgba(0,0,0,0.18);
+}
+
+@keyframes geoFeedPulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0
+            rgba(37,99,235,0.4);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 12px
+            rgba(37,99,235,0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0
+            rgba(37,99,235,0);
+    }
+}

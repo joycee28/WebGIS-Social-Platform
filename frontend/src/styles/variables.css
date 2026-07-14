@@ -1,0 +1,67 @@
+/*
+|--------------------------------------------------------------------------
+| ROOT VARIABLES
+|--------------------------------------------------------------------------
+|
+| File này chứa toàn bộ biến dùng chung toàn app.
+|
+| Bao gồm:
+| - Colors
+| - Spacing
+| - Radius
+| - Shadow
+| - Transition
+| - Z-index
+|
+*/
+
+:root {
+
+    
+    /* COLORS */
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+
+    --color-background: #f3f4f6;
+
+    --color-white: #ffffff;
+
+    --color-text-primary: #111827;
+    --color-text-secondary: #6b7280;
+
+    --color-border: #e5e7eb;
+
+    --color-danger: #dc2626;
+    --color-success: #16a34a;
+
+
+    /* SPACING SYSTEM */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --map-safe-top: 100px;
+
+   /* BORDER RADIUS */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+
+   /* SHADOW SYSTEM */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+
+    --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    --shadow-lg: 0 6px 20px rgba(0, 0, 0, 0.12);
+
+   /* TRANSITIONS */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.25s ease;
+
+   /* Z-INDEX */
+    --z-sidebar: 100;
+    --z-header: 200;
+    --z-modal: 1000;
+}

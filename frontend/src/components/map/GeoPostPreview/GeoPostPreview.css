@@ -1,0 +1,69 @@
+.geo-post-preview {
+
+    position: absolute;
+
+    top: var(--map-safe-top);
+    left: 15px;
+
+    width: 280px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 16px;
+
+    box-shadow:
+        0 12px 32px rgba(0,0,0,.15);
+
+    z-index: 900;
+}
+
+.geo-post-preview {
+
+    animation:
+        geoPreviewFadeIn 0.2s ease;
+}
+
+.geo-post-preview p {
+
+    margin: 8px 0;
+
+    overflow: hidden;
+
+    display: -webkit-box;
+
+    line-clamp: 3;
+
+    -webkit-line-clamp: 3;
+
+    -webkit-box-orient: vertical;
+}
+
+.geo-post-preview h4 {
+
+    margin: 0;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+@keyframes geoPreviewFadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}

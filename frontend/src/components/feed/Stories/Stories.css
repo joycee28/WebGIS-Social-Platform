@@ -1,0 +1,66 @@
+/* Stories Root */
+
+.stories {
+    display: flex;
+
+    gap: var(--spacing-lg);
+
+    overflow-x: auto;
+
+    padding:
+        var(--spacing-md)
+        0;
+
+    scrollbar-width: none;
+}
+
+/* Hide Scrollbar */
+.stories::-webkit-scrollbar {
+    display: none;
+}
+
+/* Story Item */
+
+.stories__item {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: var(--spacing-sm);
+
+    flex-shrink: 0;
+}
+
+/* Story Avatar */
+
+.stories__avatar {
+    width: 72px;
+    height: 72px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3b82f6,
+            #8b5cf6
+        );
+
+    padding: 3px;
+}
+
+/* Username */
+
+.stories__username {
+    font-size: 14px;
+
+    max-width: 80px;
+
+    text-align: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

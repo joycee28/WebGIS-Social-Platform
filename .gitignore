@@ -1,0 +1,38 @@
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/README_KHOI_PHUC.txt
+frontend/README.txt
+
+# Backend
+backend/venv/
+backend/.venv/
+backend/__pycache__/
+backend/webgis/
+backend/avatars
+backend/media
+backend/posts
+backend/node_modules/
+backend/*.pyc
+backend/db.sqlite3
+backend/dir
+
+# Environment
+.env
+.env.*
+frontend/.env
+backend/.env
+__pycache__/
+*.py[cod]
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

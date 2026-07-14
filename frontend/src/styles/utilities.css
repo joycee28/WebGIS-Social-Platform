@@ -1,0 +1,38 @@
+/* | FLEX UTILITIES */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* SPACING UTILITIES */
+.mt-md {
+  margin-top: var(--spacing-md);
+}
+
+.mb-md {
+  margin-bottom: var(--spacing-md);
+}
+
+.p-md {
+  padding: var(--spacing-md);
+}
+
+/* CARD UTILITIES */
+.card {
+  background-color: var(--color-white);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+/* TRANSITION */
+.transition {
+  transition: all var(--transition-normal);
+}

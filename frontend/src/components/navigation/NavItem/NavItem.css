@@ -1,0 +1,173 @@
+.nav-item {
+    width: 100%;
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 12px 16px;
+
+    border: none;
+    border-radius: 12px;
+
+    color: #111827;
+    background-color: transparent;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    text-align: left;
+    text-decoration: none;
+
+    cursor: pointer;
+    box-sizing: border-box;
+
+    transition:
+        color 0.18s ease,
+        background-color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.nav-item:hover {
+    color: #111827;
+    background-color: #f3f4f6;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Tab đang được chọn
+|--------------------------------------------------------------------------
+|
+| Hỗ trợ cả ba kiểu class thường gặp:
+| - nav-item--active
+| - active
+| - aria-current="page"
+|
+*/
+
+.nav-item--active,
+.nav-item.active,
+.nav-item[aria-current="page"] {
+    color: #111827;
+    background-color: #e5e7eb;
+
+    font-weight: 650;
+}
+
+.nav-item--active:hover,
+.nav-item.active:hover,
+.nav-item[aria-current="page"]:hover {
+    background-color: #dfe3e8;
+}
+
+.nav-item:active {
+    transform: scale(0.985);
+}
+
+.nav-item:focus-visible {
+    outline: 2px solid #93c5fd;
+    outline-offset: 2px;
+}
+
+.nav-item__icon {
+    position: relative;
+
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: currentColor;
+}
+
+.nav-item__icon svg {
+    width: 21px;
+    height: 21px;
+
+    stroke-width: 2;
+}
+
+.nav-item__label {
+    min-width: 0;
+
+    display: inline-block;
+
+    line-height: 1.2;
+    white-space: nowrap;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav-item__badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+
+    min-width: 18px;
+    height: 18px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 5px;
+
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+
+    color: #ffffff;
+    background-color: #ef4444;
+
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1;
+
+    box-sizing: border-box;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Sidebar thu gọn
+|--------------------------------------------------------------------------
+*/
+
+.sidebar--collapsed .nav-item {
+    justify-content: center;
+    gap: 0;
+
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.sidebar--collapsed .nav-item__label {
+    display: none;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Màn hình máy tính bảng
+|--------------------------------------------------------------------------
+*/
+
+@media (max-width: 1024px) {
+    .sidebar .nav-item {
+        justify-content: center;
+        gap: 0;
+
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .sidebar .nav-item__label {
+        display: none;
+    }
+}

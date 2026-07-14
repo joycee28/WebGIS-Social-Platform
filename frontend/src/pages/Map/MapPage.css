@@ -1,0 +1,157 @@
+/* Map Page */
+
+.map-page {
+    position: relative;
+
+    width: 100%;
+
+    height: 100vh;
+
+    overflow: hidden;
+
+    background-color: #f3f4f6;
+
+    /* border-radius: var(--radius-xl); */
+}
+
+/* Leaflet Z-Index Fix */
+
+.leaflet-container {
+    z-index: 1;
+}
+
+/* Location Picker Banner */
+
+.map-page__picker-banner {
+
+    position: absolute;
+
+    top: 16px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 4px;
+
+    padding: 12px 16px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--color-border);
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.12);
+
+    z-index: 2000;
+}
+
+.map-page__picker-banner strong {
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.map-page__picker-banner span {
+
+    font-size: 13px;
+
+    color: #6b7280;
+}
+
+
+/* ==========================================================================
+   🆕 THÀNH PHẦN BỔ SUNG: THANH MENU DANH MỤC (ĐỒNG BỘ 100% KIỂU CHỮ HỆ THỐNG)
+   ========================================================================== */
+
+/* Container bọc ngoài thanh menu danh mục du lịch */
+.map-page__category-menu {
+    position: absolute;
+    top: 16px;       /* Đồng bộ khoảng cách cách top 16px giống picker-banner của bác */
+    left: 70px;      /* Né nút ZoomControl hoặc GeoToolbar mặc định ở góc trái */
+    z-index: 999;    /* Nằm dưới picker-banner (2000) nhưng nổi lên trên bản đồ (1) */
+    display: flex;
+    gap: 8px;
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 30px; /* Kiểu dáng viên thuốc bo tròn mềm mại hiện đại */
+    box-sizing: border-box;
+    max-width: calc(100% - 120px);
+    overflow-x: auto;
+    white-space: nowrap;
+    border: 1px solid var(--color-border); /* Sử dụng chính xác biến viền hệ thống của bác */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Đồng bộ độ đổ bóng nhẹ nhàng */
+    transition: all 0.3s ease;
+}
+
+/* Ẩn hoàn toàn thanh cuộn (scrollbar) để thanh danh mục mượt mà như app di động */
+.map-page__category-menu::-webkit-scrollbar {
+    display: none; /* Trình duyệt Chrome, Safari, Opera */
+}
+.map-page__category-menu {
+    -ms-overflow-style: none;  /* IE và Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Nút bấm danh mục - Ép buộc kế thừa kiểu chữ gốc của hệ thống */
+.category-menu__btn {
+    font-family: inherit;      /* 🌟 Tự động ăn theo font chữ (Inter/Roboto/...) của trang web bác */
+    font-size: 13px;           /* Đồng bộ cỡ chữ mô tả trong banner của bác */
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #f3f4f6; /* Đồng bộ với màu nền .map-page gốc của bác */
+    color: #374151;            /* Màu chữ xám đậm dễ nhìn */
+    transition: all 0.15s ease-in-out;
+}
+
+/* Hiệu ứng di chuột (Hover) nhẹ nhàng cho các nút chưa chọn */
+.category-menu__btn:not(.category-menu__btn--active):hover {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+/* Trạng thái nút bấm khi ĐANG ĐƯỢC CHỌN (Active) */
+.category-menu__btn--active {
+    background-color: #007bff; /* Bác có thể sửa thành màu chủ đạo của dự án bác nếu cần (ví dụ: var(--color-primary)) */
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+}
+
+/* 1. Thiết lập độ dày của thanh trượt ngang */
+.map-page__category-menu::-webkit-scrollbar {
+    display: block;   /* 🌟 Hiện lại thanh trượt */
+    height: 5px;      /* Làm thanh trượt mỏng nhẹ (chỉ 5px) để không bị thô */
+}
+
+/* 2. Màu nền của đường ray trượt */
+.map-page__category-menu::-webkit-scrollbar-track {
+    background: #f1f3f5; 
+    border-radius: 10px;
+}
+
+/* 3. Màu của cục kéo trượt */
+.map-page__category-menu::-webkit-scrollbar-thumb {
+    background: #cbd5e1; /* Màu xám mượt mà tiệp với hệ thống */
+    border-radius: 10px;
+}
+
+/* 4. Hiệu ứng đổi màu đậm hơn khi người dùng di chuột vào cục trượt */
+.map-page__category-menu::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; 
+}
+
+/* Bật lại thuộc tính cuộn cho IE/Firefox */
+.map-page__category-menu {
+    -ms-overflow-style: auto;  /* IE và Edge */
+    scrollbar-width: thin;     /* Firefox (làm mỏng thanh cuộn) */
+}
